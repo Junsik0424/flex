@@ -18,11 +18,17 @@ const EntireDiv = styled.div`
   flex-direction: column;
   background-color: #f2f4f6;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
 `;
 const FirstDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media (max-width: 400px) {
+    gap: 0px 50vw;
+  }
+  width: 100%;
 `;
 const LogoContainer = styled.div`
   width: 86px;
@@ -31,9 +37,6 @@ const LogoContainer = styled.div`
   align-self: center;
   @media (min-width: 400px) {
     margin-right: 200px;
-  }
-  @media (max-width: 400px) {
-    margin-right: 51vw;
   }
 `;
 const GapDiv = styled.div`
@@ -214,6 +217,8 @@ const FourthDiv = styled.div`
   width: 457px;
   height: 168px;
   margin-left: 52px;
+  position: static;
+  position: sticky;
 `;
 const CardDiv = styled.div`
   display: flex;
