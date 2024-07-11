@@ -10,12 +10,12 @@ const Navbar = () => {
         <img src={Logo} />
       </LogoContainer>
       <GapDiv>
-        <CloudContainer>
+        <IconContainer>
           <img src={Cloud} />
-        </CloudContainer>
-        <PinContainer>
+        </IconContainer>
+        <IconContainer>
           <img src={Pin} />
-        </PinContainer>
+        </IconContainer>
       </GapDiv>
     </FirstDiv>
   );
@@ -23,34 +23,32 @@ const Navbar = () => {
 
 const FirstDiv = styled.div`
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; - flex-direction은 사실 기본 설정이 row이므로 이걸 따로 적어줄필요는 없을것같아요 */
   justify-content: center;
-  @media (max-width: 400px) {
-    gap: 0px 50vw;
-  }
   width: 100%;
+
+  padding: 20px 16px 15px 16px;
+  box-sizing: border-box;
 `;
+
 const LogoContainer = styled.div`
   width: 86px;
   height: 54px;
   display: flex;
   align-self: center;
-  @media (min-width: 400px) {
-    margin-right: 200px;
-  }
+
+  /* margin-right: 200px; - 여백을 유동적으로 주려면, flex-grow 속성을 이용해보면 좋습니다 */
+  flex-grow: 1;
 `;
+
 const GapDiv = styled.div`
   gap: 20px;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 `;
-const CloudContainer = styled.div`
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-self: center;
-`;
-const PinContainer = styled.div`
+
+// CloudContainer와 PinContainer는 완전히 기능이 중복되므로 그냥 IconContainer로 합쳤습니다.
+const IconContainer = styled.div`
   width: 30px;
   height: 30px;
   display: flex;

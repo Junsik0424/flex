@@ -58,23 +58,32 @@ const ThirdDiv = styled.div`
   justify-content: center;
   background-color: white;
   border-radius: 20px;
-  width: 368px;
-  height: 302px;
+
+  /* width: 368px; */
+  /* height: 302px; */
+  width: 100%;
+
   align-self: center;
-  @media (min-width: 400px) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    gap: 26px 0px;
-  }
+
   margin-top: 20px; //바꿔
   margin-bottom: 20px; //바꿔
   gap: 26px 0px; //바꿔
+  // 음 사실 굳이 이 부분을 바꿀 필요는 없어..보이네요 ㅎㅎ
+
+  padding: 20px 22px 30px 25px; // ThirdDiv 내의 상하좌우 여백을 이렇게 넣었습니다.
+  box-sizing: border-box;
 `;
+
+// 이 밑 부분은 건드리지 않았는데,
+// 1. BankFirstDiv, BankMiddleDiv안 아이콘에 적용된 margin 없애기
+// 2. MoneyAmount, MoneyText의 width를 고정시키지 말고 flex-grow 방식으로 늘리기
+// 이렇게 적용해보시면 좋을 것 같아요!
 const BankFirstDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
+
 const BankText = styled.h1`
   color: black;
   font-size: 20px;
@@ -85,6 +94,7 @@ const BankText = styled.h1`
   margin-top: 0px;
   margin-bottom: 0px;
 `;
+
 const ArrowContainer = styled.div`
   position: relative;
   display: flex;
