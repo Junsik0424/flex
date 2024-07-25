@@ -36,7 +36,6 @@ const LogoContainer = styled.div`
   height: 54px;
   display: flex;
   align-self: center;
-
   /* margin-right: 200px; - 여백을 유동적으로 주려면, flex-grow 속성을 이용해보면 좋습니다 */
   flex-grow: 1;
 `;
